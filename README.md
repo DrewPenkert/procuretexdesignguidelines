@@ -8,23 +8,70 @@ Brand and social media asset guidelines for **ProcureTEX** — 3 November 2026 �
 
 | Token | Value |
 |---|---|
-| Primary purple | `#6B35E8` |
-| Deep navy | `#1A0A3C` |
-| Lime accent | `#C8FF00` |
-| Dark navy bg | `#0D0720` |
-| Secondary text | `#B8A8E8` |
-| Font | DM Sans (Google Fonts) |
-| Visual motif | Circle/node/lattice dot grid |
+| Electric Purple | `#863DFF` |
+| Dark Blue | `#060a27` |
+| Green (lime accent) | `#cbff2e` |
+| Light Purple | `#dfe0ff` |
+| Pink | `#f7aef3` |
+| Cyan Blue | `#23f6f0` |
+| White | `#ffffff` |
+| Font | Space Grotesk |
+| Visual motif | Node/circle pattern — inspired by neural network connectivity |
+| Tagline | The best-of-breed community event |
 | Event date | 3 November 2026 |
 | Venue | Circa, Amsterdam |
 | URL | procuretex.com |
 
-**Rules:**
-- Lime (`#C8FF00`) is an accent only — labels, CTAs, company names, highlights. Never use for body copy.
-- Secondary text is always `#B8A8E8` — never grey, never white at reduced opacity.
-- Logo: `ProcureTEX` — the `TEX` is always lime, `Procure` is always white.
-- Backgrounds: always dark. Never white or light backgrounds.
-- Speaker photos: right side with left-to-right gradient fade. Never circles — use `border-radius: 12–16px`.
+---
+
+## Typography
+
+**Typeface: Space Grotesk** (all weights)
+
+| Weight | Use |
+|---|---|
+| Light | Body copy, supporting text |
+| Regular | Headlines (in caps), subheadings |
+| SemiBold | Highlights, labels |
+| Bold | Key headlines, speaker names, emphasis |
+
+Rules:
+- Headlines are typically ranged left
+- Centred text only used within node shapes or on full-bleed photography
+- Font substitute: Arial (web/email fallback only)
+
+---
+
+## Colour rules
+
+- **Electric Purple `#863DFF`** — primary brand colour, backgrounds, gradients
+- **Dark Blue `#060a27`** — deepest background, text on light
+- **Lime `#cbff2e`** — accent only: labels, CTAs, company names, highlights, capsule borders. Never body copy
+- **Light Purple `#dfe0ff`** — secondary/muted text, soft accents
+- Gradients: max 3 colours. Purple-to-blue, purple-to-pink, purple-to-dark are all valid
+- Backgrounds always dark — never white or light
+
+---
+
+## Logo
+
+- **Primary:** White wordmark + lime TEX mark — use on dark backgrounds
+- **On light:** Black wordmark + purple TEX mark
+- **On purple:** White wordmark + lime TEX mark
+- Clear space: minimum cap-height of the "O" on all four sides
+- Never stretch, rotate, recolour, add shadow, or recreate
+
+---
+
+## Graphics
+
+The brand pattern is a **node system** — circles and connections inspired by a neural network. It represents connection, innovation, and forward thinking.
+
+Usage:
+- Pattern can be used as full background, edge texture, or isolated nodes
+- Nodes/capsules are used to frame key text (headlines, CTAs)
+- Pattern colour should match a primary brand colour
+- Photos are **blended into** the graphic using the node shapes — not placed as separate blocks. Use luminosity blend mode with a purple colour overlay so the person bleeds into the background
 
 ---
 
@@ -32,29 +79,33 @@ Brand and social media asset guidelines for **ProcureTEX** — 3 November 2026 �
 
 | File | Format | Use |
 |---|---|---|
-| `components/speaker-card.html` | 480×480px (1:1) | Single or multi-speaker LinkedIn posts |
-| `components/partner-post.html` | 480×480px (1:1) | Community/proud partner announcements |
-| `components/linkedin-banner.html` | 480×270px (16:9) | Event banners, session announcements |
+| `components/templates.html` | 480×480px (1:1) + 480×270px (16:9) | Speaker cards, partner posts, LinkedIn banners |
+| `tokens/brand.css` | CSS variables | All brand tokens |
 
 ---
 
 ## How to generate assets with Claude
 
-Go to [claude.ai](https://claude.ai) and use these prompt templates. Paste the prompt, attach any photos needed, and Claude will output a ready-to-export HTML file.
+Go to [claude.ai](https://claude.ai) and use these prompt templates.
 
 ---
 
 ### Speaker card (single)
 
 ```
-Using the ProcureTEX brand system (deep navy/purple background #1A0A3C→#6B35E8 gradient, lime accent #C8FF00, DM Sans font, node/lattice dot pattern overlay), create a 480×480px LinkedIn speaker card for:
+Using the ProcureTEX brand system:
+- Font: Space Grotesk (Bold for name, Regular for role, Light for body)
+- Background: dark #060a27 with radial purple gradient #863DFF
+- Accent: lime #cbff2e for labels, CTAs, company name
+- Node circle pattern overlay at low opacity
+- Photo blended into background using luminosity blend + purple overlay (not a separate block)
 
+Create a 480×480px LinkedIn speaker card for:
 Name: [Full name]
 Title: [Job title]
 Company: [Company name]
-Session: [Session title or leave blank]
 
-Attach their headshot — place it on the right side with a left-to-right gradient fade. Add "Save your spot →" CTA button in lime and procuretex.com URL in the footer. Label pill should read "Speaker" in lime outline style.
+Add date capsule "3 Nov 2026 · Amsterdam" in lime, "Speaker" label in purple capsule, "Save your spot →" CTA in lime, procuretex.com in footer.
 ```
 
 ---
@@ -62,15 +113,13 @@ Attach their headshot — place it on the right side with a left-to-right gradie
 ### Multi-speaker card (3 speakers)
 
 ```
-Using the ProcureTEX brand system (deep navy background #1A0A3C, lime accent #C8FF00, DM Sans font, node/lattice dot pattern), create a 480×480px LinkedIn speakers card with:
+Using the ProcureTEX brand system (Space Grotesk font, #060a27 dark background, #863DFF purple gradient, #cbff2e lime accent, node circle pattern), create a 480×480px speakers card:
 
 Speaker 1: [Name] · [Title] · [Company]
 Speaker 2: [Name] · [Title] · [Company]
 Speaker 3: [Name] · [Title] · [Company]
 
-Session/panel title: [Title or leave blank]
-
-List speakers vertically with small rounded headshots (52×52px, border-radius 12px, lime border at 25% opacity). Add "Save your spot →" CTA and procuretex.com in the footer.
+List speakers vertically with small rounded thumbnails (52×52px, border-radius 12px, lime border). Headline "Meet the speakers" in Space Grotesk Bold. Add "Save your spot →" CTA and procuretex.com footer.
 ```
 
 ---
@@ -78,12 +127,12 @@ List speakers vertically with small rounded headshots (52×52px, border-radius 1
 ### Partner post
 
 ```
-Using the ProcureTEX brand system (deep navy/purple gradient background, lime accent #C8FF00, DM Sans font, node lattice pattern), create a 480×480px community partner post for:
+Using the ProcureTEX brand system (Space Grotesk font, #060a27 dark background, #863DFF purple radial gradient, #cbff2e lime accent, node circle pattern overlay), create a 480×480px community partner post for:
 
 Partner name: [Company name]
-[Attach partner logo — will be placed white/inverted centre card]
+[Attach partner logo]
 
-Layout: ProcureTEX logo top-left, "Community Partners" label, partner logo centred, divider line in lime, "Proud partner of" in muted text, "ProcureTEX" in large bold type below with TEX in lime. Event date and procuretex.com in footer.
+Layout: ProcureTEX logo top-left, partner logo centred in a rounded box with lime border, "Proud partner of" in muted text (Space Grotesk Light), "ProcureTEX" large bold below. Event date and procuretex.com in footer.
 ```
 
 ---
@@ -91,35 +140,25 @@ Layout: ProcureTEX logo top-left, "Community Partners" label, partner logo centr
 ### LinkedIn banner (16:9)
 
 ```
-Using the ProcureTEX brand system (deep navy/purple gradient #1A0A3C→#6B35E8, lime accent #C8FF00, DM Sans font), create a 480×270px LinkedIn banner for:
+Using the ProcureTEX brand system (Space Grotesk font, #060a27 dark background, #863DFF purple gradient, #cbff2e lime accent, node pattern), create a 480×270px LinkedIn banner:
 
 Headline: [2–4 words]
-Subtext: [Speaker name, session title, or event detail]
-CTA: [Register now / Save your spot / Learn more]
-[Attach speaker photo if applicable]
+Subtext: [Speaker name, session or event detail]
+[Attach photo if applicable — blend into background using luminosity mode]
 
-Place photo right side with fade overlay. Add event label pill "3 Nov · Amsterdam" in lime outline above headline.
+Add lime date capsule "3 Nov 2026 · Amsterdam", "Register now →" CTA in lime pill, procuretex.com in footer.
 ```
 
 ---
 
 ## Exporting
 
-All templates are HTML files — open in Chrome, then:
-
-1. Right-click → Inspect → toggle device toolbar
-2. Set canvas to exact pixel dimensions
-3. Use a screenshot tool (CleanShot, Shottr, or browser extension) to capture at 2× for retina export
-4. Or: open the HTML, `Cmd+Shift+4` on Mac to screenshot the exact card area
-
-For batch exports or higher fidelity, bring the HTML into Figma via the HTML-to-Figma plugin, or rebuild in Figma using these tokens.
+Open the HTML file in Chrome, then screenshot at the exact canvas size using CleanShot, Shottr, or browser dev tools at 2× for retina. Or bring into Figma via the HTML-to-Figma plugin.
 
 ---
 
 ## Adding new asset types
 
-To add a new template, ask Claude:
-
 ```
-Using the ProcureTEX design system in this repo (purple #6B35E8, lime #C8FF00, navy #1A0A3C, DM Sans, node lattice pattern), create a new [asset type] template at [dimensions]. Follow the same file structure as the existing components.
+Using the ProcureTEX design system (Space Grotesk font, Electric Purple #863DFF, Lime #cbff2e, Dark Blue #060a27, node circle pattern), create a new [asset type] at [dimensions]. Follow the same structure as the existing components.
 ```
